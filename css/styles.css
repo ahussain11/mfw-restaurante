@@ -1,9 +1,26 @@
+/* imports */
+
 @import url('https://fonts.googleapis.com/css?family=Lobster|Raleway:300,400,700');
+
+/* variables */
 
 :root {
   --raleway: 'Raleway', sans-serif;
   --lobster: 'Lobster', cursive, sans-serif;
+
+  --white: #fafafa;
+  --orange: #f7472a;
+  --light-shadow: rgba(0, 0, 0, .2);
+  --dark-shadow: rgba(0, 0, 0, .6);
 }
+
+/* oocss */
+
+.font-bold {
+  font-weight: bolder;
+}
+
+/* styles */
 
 body {
   background: #000;
@@ -33,8 +50,94 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .carousel-inner > .item > img {
   width: 100%;
+}
+
+#story, #review, #menu, #contact {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#story {
+  background: var(--white);
+}
+
+.story-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 90px;
+}
+
+.story-header {
+  font-family: Lobster;
+  font-size: 70px;
+  color: var(--orange);
+  text-shadow: 1px 1px 3px var(--dark-shadow);
+}
+
+.story-tag {
+  font-size: 24px;
+}
+
+.story-right {
+  display: flex;
+  align-items: center;
+}
+
+.year {
+  position: absolute;
+  font-family: Lobster;
+  font-size: 10em;
+  color: rgba(0, 0, 0, .2);
+  margin:0;
+}
+
+.container-border::before {
+content: '';
+display: block;
+background: #777777;
+height: 4px;
+border-radius: 3px;
+margin-bottom: 50px;
+}
+
+#review {
+  background: url('../img/food_review.jpg');
+  background-size: cover;
+}
+
+.review-info {
+  background: var(--dark-shadow);
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+}
+
+.review-header {
+  color: var(--orange);
+  font-family: Lobster;
+  text-shadow: 1px 1px 3px var(--dark-shadow);
+  font-size: 70px;
+}
+
+.review-body {
+  color: var(--white);
+  font-size: 20px;
+  font-family: var(--Raleway);
+}
+
+#menu {
+  background: #bada55;
+}
+
+#contact {
+  background: plum;
 }
